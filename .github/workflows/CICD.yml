@@ -1,0 +1,24 @@
+name: CICD_workflow
+on:
+  workflow_dispatch:
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetching the code
+        run: echo "fetching code"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Building the code
+        run: building the code in docker container
+  test:
+    runs-on: macos-latest
+    steps:
+      - name: running the test step
+        run: echo "Running the test on the artifacts"
+  deploy:
+     runs-on: ubuntu-latest
+     steps:
+       - name: deploying the code on production
+         run: echo "Deploying the code"
