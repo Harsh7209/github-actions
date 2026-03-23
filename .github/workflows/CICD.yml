@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Building the code
-        run: building the code in docker container
+        run: echo "building the code in docker container"
   test:
     runs-on: macos-latest
     steps:
