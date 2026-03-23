@@ -21,4 +21,4 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: what are  your goals
-     run: echo "i want to join MNC as a devops  engg."
+       run: echo "i want to join MNC as a devops  engg."
