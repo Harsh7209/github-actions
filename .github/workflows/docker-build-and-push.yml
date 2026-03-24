@@ -23,7 +23,7 @@ jobs:
               uses: docker/build-push-action@v6
               with:
                 context: .
-                tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-app:latest
+                tags: ${{ vars.DOCKERHUB_USERNAME }}/flask-app:${{ github.sha }}
                 cache-from: type=gha
                 cache-to: type=gha,mode=max 
                 push: true
