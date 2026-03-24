@@ -1,0 +1,33 @@
+name: python_lint
+
+on: 
+  push: 
+    branches: 
+      - main
+
+job: 
+  code_check:
+    runs_on: ubuntu:latest
+    strategy:
+      fail-fast: false
+      matrix: 
+        python: ["3.11","3.12","3.13","3.14"]
+        
+    steps: 
+      - name: code checkout
+        uses: actions/checkout@v4
+
+      - name: setup python
+        uses: actions/setup-python@v5
+        with: 
+          python-version: ${{matrix.python}}
+
+      - name: install dependencies 
+        run: pip install -r requirments.txt
+
+      - name: running tests
+        run: flake8 app.py
+           
+
+
+
