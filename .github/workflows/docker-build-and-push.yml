@@ -23,5 +23,5 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          tags: ${{ vars.DOCKERHUB_USERNAME }}/flask-app:${{ github.sha }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/flask-app:${{ github.sha }}
           push: true
