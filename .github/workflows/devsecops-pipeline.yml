@@ -24,4 +24,8 @@ jobs:
 
   Trivy_scan: 
     needs: [Build_and_push]
+    permissions:
+     contents: read
+     security-events: write
     uses: ./.github/workflows/dockerhub-image_scan.yml
+    secrets: inherit
