@@ -2,5 +2,5 @@ services:
   web_container:
     image: ${DOCKERHUB_USERNAME}/flask-app:${TAG}
     ports:
-      - "8080:80"
+      - "80:80"
     container_name: flask_container
