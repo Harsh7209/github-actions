@@ -38,7 +38,9 @@ jobs:
     steps:
       - name: deploying container on self hosted runner
         run: |
+
           docker compose pull
+          docker compose down
           docker compose up -d --build
         env:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
