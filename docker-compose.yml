@@ -1,6 +1,6 @@
 services:
   web_container:
-    image: ${{secrets.DOCKERHUB_USERNAME}}/flask-app:${{secrets.github.sha}}
+    image: ${secrets.DOCKERHUB_USERNAME}/flask-app:${secrets.github.sha}
     ports:
       - "80:80"
     container_name: flask_container
