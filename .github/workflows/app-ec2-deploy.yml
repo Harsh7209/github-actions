@@ -20,10 +20,8 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-          source: |
-            docker-download.txt 
-            docker-compose.yml
-          target: /home/ubuntu/
+          source: "."
+          target: "/home/ubuntu/"
 
       - name: ssh to  server
         uses: appleboy/ssh-action@v1
