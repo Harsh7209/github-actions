@@ -1,5 +1,5 @@
 #This workflow defines a DevSecOps pipeline that includes code quality checks, dependency scanning, secret scanning, Dockerfile scanning, building and pushing Docker images, scanning images with Trivy, and deploying the application on an EC2 instance. Each job is defined in separate workflow files for better modularity and maintainability.
-
+name: DevSecOps-pipeline
 on:
   workflow_dispatch:
 
